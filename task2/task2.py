@@ -11,7 +11,7 @@ import math
 def main():
 
     if len(sys.argv) != 3:
-        sys.exit("Usage: python circle_coordinates(csv) dots_coordinates(csv)")
+        sys.exit("Usage: python task2.py circle_coordinates(csv) dots_coordinates(csv)")
 
 
     with open(sys.argv[1], 'r') as file:
