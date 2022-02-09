@@ -1,0 +1,38 @@
+// Some parts of the code written during the course. 
+// We are prohibited to show the answers to the tasks, but in order to understand my current level, I can show some parts of written code:
+
+// Example 1:
+bool vote(string name)
+{
+    for (int k = 0; k < candidate_count; k++)
+    {
+        if (strcmp(candidates[k].name, name) == 0)
+        {
+            candidates[k].votes ++;
+            return true;
+        }
+    }
+    return false;
+}
+
+// Example 2:
+void ref(int height, int width, RGB image[height][width])
+{
+    RGB reflect[height][width];
+    for (int i = 0; i <= (height - 1); i ++)
+    {
+        for (int j = 0; j <= (width - 1); j ++)
+        {
+            reflect[i][j] = image[i][(width - 1 - j)];
+        }
+    }
+
+    for (int i = 0; i <= (height - 1); i ++)
+    {
+        for (int j = 0; j <= (width - 1); j ++)
+        {
+            image[i][j] = reflect[i][j];
+        }
+    }
+    return;
+}
